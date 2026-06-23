@@ -18,6 +18,8 @@ services:
         value: postgres
       - key: DATABASE_SSL
         value: true
+      - key: DATABASE_SSL_REJECT_UNAUTHORIZED
+        value: false
       - key: APP_KEYS
         generateValue: true
       - key: API_TOKEN_SALT
