@@ -1,0 +1,11 @@
+node_modules/
+.next/
+dist/
+.tmp/
+build/
+.env
+.env.local
+.env.production
+*.db
+.DS_Store
+*.log
