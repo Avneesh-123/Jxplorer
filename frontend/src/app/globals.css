@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #050816;
+  --surface: rgba(15, 23, 42, 0.55);
+  --border: rgba(148, 163, 184, 0.1);
+  --accent: #6366f1;
+  --accent-light: #818cf8;
+}
+
+body {
+  background: var(--bg);
+  color: #f1f5f9;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+.delay-2 {
+  animation-delay: 0.2s;
+}
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #e0e7ff, #818cf8, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mesh {
+  background-image:
+    radial-gradient(ellipse 70% 60% at 10% 20%, rgba(99, 102, 241, 0.18), transparent),
+    radial-gradient(ellipse 50% 50% at 90% 80%, rgba(56, 189, 248, 0.1), transparent);
+}
+
+.glass-card {
+  background: var(--surface);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 0 0 1px rgba(99, 102, 241, 0.05),
+    0 20px 60px -15px rgba(0, 0, 0, 0.5);
+}
+
+.input-field {
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.input-field:focus {
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+  outline: none;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  transition: all 0.25s ease;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(135deg, #818cf8, #6366f1);
+  box-shadow: 0 8px 30px -6px rgba(99, 102, 241, 0.55);
+  transform: translateY(-1px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
